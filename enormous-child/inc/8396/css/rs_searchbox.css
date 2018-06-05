@@ -1,0 +1,535 @@
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700|Unica+One');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+a img {
+    border: none;
+}
+#rs_icon_caret{
+    color: #2F436B;
+}
+.rs_fixBackground{
+    background-color:white;
+    width:100%;
+    margin-top: 5px;
+}
+#rs_regSearch{
+    display: none;
+}
+.rs_advanced_search_div
+{
+    margin-top: 10px;
+}
+.rs_company_row, .rs_ct_row{
+    width: 49.5%;
+    display: inline-block;
+}
+.sb_label{
+    color: white;
+    font-weight: normal;
+    padding-left: 10px;
+    width: 100%;
+    background-color: #4C92CE;
+}
+.clear {
+    clear: both;
+}
+.rs_searchWrapper * {
+    box-sizing: border-box;
+}
+.rs_searchWrapper {
+    max-width: 1140px;
+}
+.rs_searchWrapper .rs_searchbox {
+    color: #333;
+    font-weight: 400;
+    font-family: Tahoma, Geneva, sans-serif;
+    text-align: left;
+    padding: 25px 35px 35px;
+    position: relative;
+    font-size: 16px;
+    vertical-align: middle;
+    background-color: #4C92CE;
+    border: 1px solid #dddddd;
+}
+.rs_searchWrapper .rs_searchbox .rs_search_form {
+    clear: both;
+}
+.rs_searchWrapper .rs_searchbox .rs_searchbox_hide {
+    display: none;
+}
+.rs_searchWrapper .rs_products {
+    margin: 0 0 30px;
+    padding: 0;
+    list-style: none;
+    letter-spacing: 2.4px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.rs_searchWrapper .rs_products li {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 12px 15px;
+    cursor: pointer;
+    font-family: Tahoma, Geneva, sans-serif;
+    color: white;
+}
+.rs_searchWrapper .rs_products li.last_tab {
+    margin: 0;
+}
+.rs_searchWrapper .rs_products li.highlight_tab {
+    color: #FCF100;
+}
+.rs_searchWrapper .rs_products li .rs_product_icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 26px;
+    height: 25px;
+    margin: 0 5px 0 0;
+    margin-top: -5px;
+    background-image: url(../images/products.png);
+    background-repeat: no-repeat;
+}
+.rs_searchWrapper .rs_products li.highlight_tab .rs_product_icon {
+    background-image: url(../images/products_highlight.png);
+}
+.rs_searchWrapper .rs_products li #iconHotel {
+    background-position: -0px -0px;
+}
+.rs_searchWrapper .rs_products li #iconAir {
+    background-position: -52px -0px;
+}
+.rs_searchWrapper .rs_products li #iconCar {
+    background-position: -26px -0px;
+}
+.rs_searchWrapper .rs_products li #iconVP {
+    background-position: -78px -0px;
+}
+.rs_searchWrapper .rs_product_select {
+    display: none !important;
+}
+.rs_searchWrapper .rs_searchbox .rs_no_margin {
+    margin-right: 0 !important;
+}
+input[type='text']::-ms-clear {
+    display: none;
+}
+select,
+.rs_searchWrapper .rs_searchbox .rs_autosuggest,
+.rs_searchWrapper .rs_searchbox .rs_from,
+.rs_searchWrapper .rs_searchbox .rs_to,
+.rs_searchWrapper .rs_searchbox .rs_chk_in,
+.rs_searchWrapper .rs_searchbox .rs_chk_out,
+.rs_searchWrapper .rs_searchbox .rs_product_select,
+.rs_searchWrapper .rs_searchbox .rs_rooms,
+.rs_searchWrapper .rs_searchbox .rs_time_in,
+.rs_searchWrapper .rs_searchbox .rs_time_out,
+.rs_searchWrapper .rs_searchbox .rooms,
+.rs_searchWrapper .rs_searchbox .rs_select_box,
+.rs_searchWrapper .rs_searchbox .rs_company,
+.rs_searchWrapper .rs_searchbox .rs_cartype {
+	background-color: white;
+    border: 1px solid #cccccc;
+    font-size: 13px;
+    color: #555555;
+    outline: none;
+}
+.rs_searchWrapper .rs_searchbox .rs_form_row {
+    margin-bottom: 15px;
+}
+.rs_pickup, .rs_dropoff, .rs_cabin_box{
+    margin-top: 19px;
+}
+#rs_pickup, #rs_dropoff{
+    margin-top:5px;
+}
+.rs_searchWrapper .rs_searchbox .rs_car_form .rs_car_options {
+    margin: 0 0 15px;
+}
+.rs_searchWrapper .rs_searchbox .rs_car_form .rs_car_options .rs_car_option {
+    display: inline-block;
+    float: left;
+    margin-right: -1px;
+    padding: 10px 12px;
+    color: #444444;
+    background-color: white;
+    border: 1px solid #cccccc;
+}
+.rs_searchWrapper .rs_searchbox .rs_car_form .rs_car_options .car_highlight {
+    background-color: #2F436B;
+    color: white;
+    border-color: #2F436B;
+}
+.rs_searchWrapper .rs_searchbox .rs_car_form .rs_different_location {
+	display: none;
+}
+.rs_searchWrapper .rs_searchbox .rs_car_form .rs_droppff_div {
+    width: 49.5%;
+    margin-right: 0;
+}
+.rs_searchWrapper .rs_searchbox .rs_car_form .rs_half_width {
+    width: 49.5%;
+}
+.rs_searchWrapper .rs_searchbox .rs_car_form .clear_car {
+    display: block;
+}
+.rs_searchWrapper .rs_searchbox .rs_air_form {
+    position: relative;
+}
+.rs_searchWrapper .rs_searchbox .rs_air_form .rs_air_options {
+    margin: 0 0 15px;
+}
+.rs_searchWrapper .rs_searchbox .rs_air_form .rs_air_options .rs_air_option {
+    display: inline-block;
+    float: left;
+    margin-right: -1px;
+    padding: 10px 12px;
+    color: #444444;
+    background-color: white;
+    border: 1px solid #cccccc
+}
+.rs_searchWrapper .rs_searchbox .rs_air_form .rs_air_options .air_highlight {
+    color: white;
+    background-color: #2F436B;
+    border-color: #2F436B;
+}
+.rs_searchWrapper .rs_searchbox .air_flight_3,
+.rs_searchWrapper .rs_searchbox .air_flight_4,
+.rs_searchWrapper .rs_searchbox .air_flight_5 {
+    display: none;
+}
+.rs_searchWrapper .rs_searchbox .rs_air_form h3 {
+    margin: 0 0 15px;
+    letter-spacing: 2.0px;
+    text-transform: uppercase;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+.rs_searchWrapper .rs_searchbox .add_rem_flight {
+    cursor: pointer;
+    margin: 5px 10px 5px 0;
+    padding: 9px 15px;
+    color: white;
+    display: inline-block;
+    background-color: #f17a02;
+    text-transform: uppercase;
+    letter-spacing: 2.0px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+.rs_searchWrapper .rs_searchbox .rs_air_form .rs_origin_row,
+.rs_searchWrapper .rs_searchbox .rs_air_form .rs_destination_row {
+    display: inline-block;
+    width: 49.5%;
+    /*margin-right: 1%;*/
+    float: left;
+}
+.rs_searchWrapper .rs_searchbox .rs_air_form .rs_date {
+    width: 24.25%;
+}
+.rs_searchWrapper .rs_searchbox .rs_air_form .rs_rooms_row {
+    width: 15.8%;
+}
+.rs_searchWrapper .rs_searchbox .rs_air_form #air_multi_dest .rs_rooms_row {
+    width: 22%;
+}
+.rs_searchWrapper .rs_searchbox .rs_air_form .clear_air {
+    display: none;
+}
+.rs_searchWrapper .rs_searchbox .rs_vp_form .rs_origin_row,
+.rs_searchWrapper .rs_searchbox .rs_vp_form .rs_destination_row {
+    display: inline-block;
+    width: 49.5%;
+    /*margin-right: 1%;*/
+    float: left;
+}
+.rs_searchWrapper .rs_searchbox .rs_vp_form .rs_date {
+    width: 24.25%;
+}
+.rs_searchWrapper .rs_searchbox .rs_vp_form .rs_rooms_row {
+    width: 15.8%;
+}
+.rs_searchWrapper .rs_searchbox #childrens_ages{
+    display: none;
+}
+.rs_searchWrapper .rs_searchbox .rs_autosuggest,
+.rs_searchWrapper .rs_searchbox .rs_from,
+.rs_searchWrapper .rs_searchbox .rs_to {
+    height: 42px;
+    width: 100%;
+    padding: 5px 10px;
+    /*border-radius:6px;*/
+}
+.rs_searchWrapper .rs_searchbox .rs_car_form .rs_droppff_div,
+#air_one_way,
+#air_multi_dest {
+    display: none;
+}
+.rs_searchWrapper .rs_searchbox .rs_date_input_container {
+    position: relative;
+    cursor: pointer;
+}
+.rs_searchWrapper .rs_searchbox .rs_date_input_container input {
+    display: block;
+    /*border-radius: 6px;*/
+/*    margin-top: 5px;
+*/
+}
+.rs_searchWrapper .rs_searchbox .rs_chk_in,
+.rs_searchWrapper .rs_searchbox .rs_chk_out {
+    cursor: pointer;
+    background-image: url(../images/calendar.gif);
+    background-position: 10%;
+    text-align: center;
+    background-repeat: no-repeat;
+    height: 42px;
+    width: 100%;
+    padding: 5px 10px;
+}
+.rs_searchWrapper .rs_searchbox .rs_mobi {
+    display: none;
+}
+.rs_searchWrapper .rs_searchbox .rs_mobi_date_container {
+    width: 48.7%;
+    color: #555555;
+    background-color: white;
+    display: inline-block;
+    zoom: 1;
+    border: 1px solid #cccccc;
+    text-align: right;
+    margin-bottom: 12px;
+    /*border-radius: 6px;*/
+}
+.rs_searchWrapper .rs_searchbox .rs_mobile_room_counter {
+    display: none;
+}
+.rs_searchWrapper .rs_searchbox .rs_mobi_title {
+    padding: 5px 0;
+}
+.rs_searchWrapper .rs_searchbox .rs_mobi_chk_day {
+    font-size: 45px;
+    font-weight: bold;
+    margin: 7px 0;
+}
+.rs_searchWrapper .rs_searchbox .rs_mobi_chk_month {
+    margin-bottom: 7px;
+}
+.rs_searchWrapper .rs_searchbox .rs_mobi_in {
+    float: left;
+}
+.rs_searchWrapper .rs_searchbox .rs_mobi_out {
+    float: right;
+}
+.rs_searchWrapper .rs_searchbox .rs_autosuggest_row {
+    display: inline-block;
+    width: 32%;
+    /*margin-right: 1%;*/
+    vertical-align: middle;
+    float: left;
+}
+.rs_searchWrapper .rs_searchbox .rs_date {
+    display: inline-block;
+    width: 18%;
+    /*margin-right: 1%;*/
+    vertical-align: middle;
+    float: left;
+}
+.rs_searchWrapper .rs_searchbox .rs_rooms_row {
+    display: inline-block;
+    width: 14%;
+    /*margin-right: 1%;*/
+    vertical-align: middle;
+    float: left;
+    /*border: 1px solid #cccccc;*/
+}
+.rs_searchWrapper .rs_searchbox .rs_guest_row {
+    display: inline-block;
+    width: 14%;
+    vertical-align: middle;
+    float: left;
+/*    border: 1px solid #cccccc;
+*/}
+.rs_searchWrapper .rs_searchbox .rs_product_select,
+.rs_searchWrapper .rs_searchbox .rs_select_box,
+.rs_searchWrapper .rs_searchbox .rs_rooms,
+.rs_searchWrapper .rs_searchbox .pax,
+.rs_searchWrapper .rs_searchbox .rs_time,
+.rs_searchWrapper .rs_searchbox .rooms,
+.rs_searchWrapper .rs_searchbox .rs_company,
+.rs_searchWrapper .rs_searchbox .rs_cartype  {
+    width: 100%;
+    display: inline-block;
+    height: 42px;
+    padding: 5px 10px;
+    border-right: none;
+    border-left: none;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+}
+.rs_searchWrapper .rs_searchbox .rs_product_select {
+    border: 1px solid #cccccc;
+}
+.rs_searchWrapper .rs_searchbox .rs_button_row {
+    display: inline-block;
+    float: left;
+    width: 20%;
+    vertical-align: middle;
+    position: relative;
+}
+.rs_searchWrapper .rs_searchbox .rs_search {
+    padding: 0;
+    background: #2F436B;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: Tahoma, Geneva, sans-serif;
+    cursor: pointer;
+    text-align: center;
+    /*border-radius: 6px;*/
+}
+.rs_searchWrapper .rs_searchbox .rs_search:hover {
+    color: #FCF100;
+}
+@media only screen and (max-width: 820px) {
+    .rs_searchWrapper .rs_searchbox {
+        padding: 30px;
+    }
+    .rs_searchWrapper .rs_products {
+        display: none;
+    }
+    .rs_searchWrapper .rs_product_select {
+        display: block !important;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_car_form .rs_droppff_div {
+        margin-left: 1%;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_car_form .rs_chk_out_row {
+        /*margin-right: 1%;*/
+    }
+    .rs_searchWrapper .rs_searchbox .rs_car_form .rs_last_time {
+        margin-right: 0;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_air_form .rs_date {
+        width: 49.5%;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_air_form #air_one_way .rs_date {
+        width: 49.5%;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_air_form .rs_rooms_row {
+        width: 32.56%;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_air_form #air_multi_dest .rs_rooms_row {
+        width: 32.56%;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_air_form .clear_air { 
+        display: block;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_vp_form .rs_date {
+        width: 49.5%;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_vp_form .rs_rooms_row {
+        width: 32.56%;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_autosuggest_row {
+        width: 100%;
+        margin-right: 0;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_date {
+        width: 49.5%;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_chk_out_row {
+        margin-right: 0;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_rooms_row {
+        width: 49.5%;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_guest_row {
+        width: 49.5%;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_button_row {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 470px) {
+    .rs_searchWrapper .rs_searchbox {
+        padding: 15px;
+    }
+    .rs_searchWrapper .rs_products li {
+        margin: 0;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_search_form {
+    	padding: 0;
+    	border-top: none;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_form_row {
+        margin-bottom: 12px;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_air_form .rs_origin_row, 
+    .rs_searchWrapper .rs_searchbox .rs_air_form .rs_destination_row {
+        width: 100%;
+        margin-right: 0;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_air_form .rs_rooms_row {
+        width: 100%;
+        margin-right: 0;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_air_form #air_one_way .rs_rooms_row {
+        width: 100%;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_air_form #air_multi_dest .rs_rooms_row {
+        width: 100%;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_vp_form .rs_origin_row, 
+    .rs_searchWrapper .rs_searchbox .rs_vp_form .rs_destination_row {
+        width: 100%;
+        margin-right: 0;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_vp_form .rs_rooms_row {
+        width: 100%;
+        margin-right: 0;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_car_form .rs_half_width {
+        width: 100%;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_car_form .rs_droppff_div {
+        width: 100%;
+        margin-left: 0;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_car_form .rs_last_time {
+        margin-right: 2%;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_mobi_date_container {
+        display: block;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_mobi {
+        display: block;
+        clear: both;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_date_input_container input {
+        display: none;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_date {
+        display: none;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_button_row {
+        width: 100%;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_search {
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -khtml-border-radius: 5px;
+        border-radius: 5px;
+    }
+}

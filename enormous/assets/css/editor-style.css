@@ -1,0 +1,9 @@
+@CHARSET "ISO-8859-1";
+blockquote {
+    padding: 24px 30px;
+    margin: 0 0 20px;   
+    font-size: 20px;
+    line-height: 28px;
+    font-style: italic;
+    border-left: 6px solid #222;
+}

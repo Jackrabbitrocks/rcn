@@ -1,0 +1,122 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  font-family: Poppins;
+  font-weight: 700;
+  color: #222;       
+  letter-spacing: 0;
+  visibility: inherit !important;
+}       
+
+h1 {
+  font-size: 52px;
+  line-height: 46px;
+  margin: 0 0 15px;   
+}
+
+h2 {
+  font-size: 42px;
+  line-height: 46px;
+  margin: 0 0 12px;
+}
+
+h3 {
+  font-size: 38px;
+  line-height: 46px;
+  margin: 0 0 11px;
+}
+
+h4 {
+  font-size: 32px;
+  line-height: 46px;
+  margin: 0 0 9px;
+}
+
+h5 {
+  font-size: 24px;
+  line-height: 46px;
+  margin: 0 0 7px;
+}
+
+h6 {
+  font-size: 18px;
+  line-height: 46px;
+  margin: 0 0 6px;     
+}
+p {
+  margin: 0 0 23px;
+}
+a {
+  color: $link_color;
+  text-decoration: none;
+  @include transition(all 300ms linear 0ms);  
+  &:hover,&:active,&:focus{
+    color: $link_color_hover;
+    outline: 0;
+    text-decoration: none;
+  }
+}
+.color-primary {
+  color: $primary_color;
+}
+.ft-poppin{
+  font-family: Poppins;
+}
+.text-uppercase{
+  text-transform: uppercase;
+}
+.ls-98{
+  letter-spacing: 0.098em;
+}
+.ls-18,.ls-18 h3{    
+  letter-spacing: -0.018em !important;    
+}
+
+.letter-spacing18{
+  letter-spacing: 0.018em !important;
+}
+.letter-spacing15 {
+  letter-spacing: 0.015em !important;
+}
+.ft-italic{
+  font-style: italic;
+}
+.fw-bold{
+  font-weight: 700;
+}
+.align-center{
+  text-align: center !important;
+}
+.align-right{
+  text-align: right;
+}
+.align-left{
+  text-align: left;
+}
+.aligncenter {
+  margin: 5px auto;
+  .wp-caption-text {
+    margin-bottom: 0;
+    padding-top: 5px;
+    text-align: center;
+  }
+}
+.alignleft {
+  margin: 5px 30px 15px 0;
+  .wp-caption-text {
+    margin-bottom: 0;
+    padding-top: 5px;
+  }
+}
+.alignright {
+  margin-left: 15px;
+  margin-bottom: 20px;
+  .wp-caption-text {
+    margin-bottom: 0;
+    padding-top: 5px;
+  }
+}
