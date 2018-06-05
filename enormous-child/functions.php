@@ -14,9 +14,30 @@ function theme_enqueue_styles()
     wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/style.css', array(
         $parent_style
     ));
+    wp_enqueue_style('rs_calendar_style', get_stylesheet_directory_uri() . '/assets/css/rs_calendar_style.css', array(
+        $parent_style
+    ));
+    wp_enqueue_style('rs_searchbox', get_stylesheet_directory_uri() . '/assets/css/rs_searchbox.css', array(
+        $parent_style
+    ));
+    wp_enqueue_style('mobile_search', get_stylesheet_directory_uri() . '/assets/css/mobile_search.css', array(
+        $parent_style
+    ));
+    wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.0.13/css/all.css', array(
+        $parent_style
+    ));
 }
 
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
+
+function wpb_adding_scripts() {
+ 
+	wp_register_script('searchbox', 'http://secure.rezserver.com/public/js/searchbox/searchbox.min.js', array('jquery'));
+	 
+	wp_enqueue_script('searchbox');
+}
+  
+add_action( 'wp_enqueue_scripts', 'wpb_adding_scripts' ); 
 
 /**
  * load vc template dir.

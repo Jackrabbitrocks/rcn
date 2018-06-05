@@ -18,7 +18,7 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php wp_head(); ?>
 </head>
-<body id="QQQ cms-theme" <?php body_class(); ?>>
+<body id="cms-theme" <?php body_class(); ?>>
 <?php 
 	enormous_get_page_loading(); 
 	$page_class_space = enormous_set_padding_class();
@@ -29,4 +29,7 @@
 		<?php enormous_header(); ?>
 	</header><!-- #masthead -->
     <?php enormous_page_title(); ?><!-- #page-title -->
+    <?php
+    // include get_stylesheet_directory_uri() . "/inc/multi.html";
+    ?>
 	<div id="content" class="site-content <?php echo esc_attr($page_class_space); ?>">
