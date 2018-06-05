@@ -29,7 +29,5 @@
 		<?php enormous_header(); ?>
 	</header><!-- #masthead -->
     <?php enormous_page_title(); ?><!-- #page-title -->
-    <?php
-    // include get_stylesheet_directory_uri() . "/inc/multi.html";
-    ?>
+    
 	<div id="content" class="site-content <?php echo esc_attr($page_class_space); ?>">
