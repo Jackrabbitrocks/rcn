@@ -33,8 +33,10 @@ add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 function wpb_adding_scripts() {
  
 	wp_register_script('searchbox', 'http://secure.rezserver.com/public/js/searchbox/searchbox.min.js', array('jquery'));
+	wp_register_script('rcn', get_stylesheet_directory_uri() . '/assets/js/rcn.js', array('jquery'));
 	 
 	wp_enqueue_script('searchbox');
+	wp_enqueue_script('rcn');
 }
   
 add_action( 'wp_enqueue_scripts', 'wpb_adding_scripts' ); 

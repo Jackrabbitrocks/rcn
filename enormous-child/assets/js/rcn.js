@@ -10,7 +10,7 @@ function showMulti(num){
 		$('.rem_flight'+prev).show();
 		$('.add_flight'+prev).show();
 	}
-	$(document).ready(function() {	
+	jQuery(document).ready(function($) {	
 		var $rs_box = $( document.getElementById( 'rs_box' ));
 		$('#rs_search_multi').searchbox({
 			refid:8396,
