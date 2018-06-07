@@ -13,3 +13,32 @@
 
 /*
 -------------------------------------------------------------- */
+
+#page-title.page-title{
+	background-image: url('http://rcn.rot8tor.com/wp-content/uploads/2018/06/background1.jpg');
+	background-size: cover;
+}
+
+body .site #page-title.page-title{
+    padding-top:40px;    
+}
+
+.rs_searchWrapper div.rs_searchbox {
+    background-color: rgba(76, 146, 206, .7);
+}
+
+.rs_searchWrapper .rs_searchbox .rs_date div, .rs_searchWrapper .rs_searchbox .rs_rooms_row, .js-advanced-car-toggle.rs_multisearch__filter_toggle.rs_advanced_search_div.sb_label, .rs_searchWrapper .rs_searchbox .rs_car_form .rs_car_options .rs_car_option, .rs_searchWrapper .rs_searchbox .rs_form_row {
+    line-height:1;
+}
+
+.rs_searchWrapper .rs_products {
+    margin: 0;
+}
+
+#rs_pickup, #rs_dropoff{
+    margin-top: 7px;
+}
+
+.sb_label{
+    background-color: transparent;
+}

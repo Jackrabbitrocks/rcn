@@ -20,9 +20,9 @@ function theme_enqueue_styles()
     wp_enqueue_style('rs_searchbox', get_stylesheet_directory_uri() . '/assets/css/rs_searchbox.css', array(
         $parent_style
     ));
-    wp_enqueue_style('mobile_search', get_stylesheet_directory_uri() . '/assets/css/mobile_search.css', array(
-        $parent_style
-    ));
+    // wp_enqueue_style('mobile_search', get_stylesheet_directory_uri() . '/assets/css/mobile_search.css', array(
+    //     $parent_style
+    // ));
     wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.0.13/css/all.css', array(
         $parent_style
     ));
@@ -50,3 +50,6 @@ add_action( 'wp_enqueue_scripts', 'wpb_adding_scripts' );
 if (function_exists("vc_set_shortcodes_templates_dir")) {
     vc_set_shortcodes_templates_dir(get_stylesheet_directory() . "/vc_templates/");
 }
+
+/* load template functions */
+require_once( get_template_directory() . '/inc/template.functions.php' );

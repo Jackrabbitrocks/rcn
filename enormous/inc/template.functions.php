@@ -526,7 +526,7 @@ function enormous_page_title(){
                 <div class="container">
                     <div class="row">
                         <div id="page-title-text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <h1 class="reset-fontsize-xs"><?php enormous_get_page_title(); ?></h1>
+                            <h1 class="reset-fontsize-xs"><?php include get_stylesheet_directory_uri() . '/inc/inc-test.php'; ?></h1>
                             <?php if(!empty($opt_meta_options['page_title_subtext'])){?>
                                 <div class="page-title-subtitle">
                                     <?php echo wp_kses_post($opt_meta_options['page_title_subtext']); ?>  
