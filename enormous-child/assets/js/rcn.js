@@ -154,6 +154,7 @@ function showMulti(num){
             $('.js-travellers-trigger').on('click',function(){
                 $(this).siblings('.rs_travellers').toggleClass('rs_travellers_on');
             });
+
             $('#js-travellers-roundtrip, #js-travellers-oneway,#js-travellers-multidest').on('change',function(){
                 var $this = $(this),
                     $adults = $('.js-travellers-adults',$this),
@@ -182,6 +183,7 @@ function showMulti(num){
                 }
                 $('.rs_search_row').not('.rs_advanced_search .rs_search_row').fadeToggle();
             });
+            $('.js-advanced-car-toggle').trigger('click');
 		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 			$("<link/>", {
 			   rel: "stylesheet",

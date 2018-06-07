@@ -27,7 +27,7 @@ body .site #page-title.page-title{
     background-color: rgba(76, 146, 206, .7);
 }
 
-.rs_searchWrapper .rs_searchbox .rs_date div, .rs_searchWrapper .rs_searchbox .rs_rooms_row, .js-advanced-car-toggle.rs_multisearch__filter_toggle.rs_advanced_search_div.sb_label, .rs_searchWrapper .rs_searchbox .rs_car_form .rs_car_options .rs_car_option, .rs_searchWrapper .rs_searchbox .rs_form_row {
+.rs_searchWrapper .rs_searchbox .rs_date div, .rs_searchWrapper .rs_searchbox .rs_rooms_row, .js-advanced-car-toggle.rs_multisearch__filter_toggle.rs_advanced_search_div.sb_label, .rs_searchWrapper .rs_searchbox .rs_car_form .rs_car_options .rs_car_option, .rs_searchWrapper .rs_searchbox .rs_form_row, .rs_searchWrapper .rs_products {
     line-height:1;
 }
 
@@ -41,4 +41,17 @@ body .site #page-title.page-title{
 
 .sb_label{
     background-color: transparent;
+}
+
+.page-template-page-full-width .wpb_text_column{
+	margin:0 20px;
+}
+
+.rs_searchWrapper .rs_searchbox {
+    padding: 35px;
+}
+
+.rs_searchWrapper .rs_products li {
+    padding: 0 15px 12px;
+    line-height: 1;
 }
