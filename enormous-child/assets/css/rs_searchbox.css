@@ -508,10 +508,11 @@ select,
         margin-left: 0;
     }
     .rs_searchWrapper .rs_searchbox .rs_car_form .rs_last_time {
-        margin-right: 2%;
+        margin-right: 1%;
     }
     .rs_searchWrapper .rs_searchbox .rs_mobi_date_container {
         display: block;
+        text-align: center;
     }
     .rs_searchWrapper .rs_searchbox .rs_mobi {
         display: block;
@@ -531,5 +532,8 @@ select,
         -webkit-border-radius: 5px;
         -khtml-border-radius: 5px;
         border-radius: 5px;
+    }
+    .rs_ct_row{
+        width: 48.5%;
     }
 }
