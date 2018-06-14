@@ -43,10 +43,6 @@ body .site #page-title.page-title{
     background-color: transparent;
 }
 
-.page-template-page-full-width .wpb_text_column{
-	margin:0 20px;
-}
-
 .rs_searchWrapper .rs_searchbox {
     padding: 35px;
 }
@@ -55,3 +51,51 @@ body .site #page-title.page-title{
     padding: 0 15px 12px;
     line-height: 1;
 }
+
+div.page-space-content{
+    padding-top: 0;
+}
+
+#content{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (max-width: 470px){
+    .rs_searchWrapper .rs_searchbox .rs_mobi_date_container{
+        text-align: center;
+    }
+    .rs_searchWrapper .rs_searchbox .rs_rooms_row{
+        width: 49%;
+    }
+
+    .rs_car_option{
+        width: 50%;
+        text-align: center;
+    }
+}
+@media (max-width: 598px){
+    div.rs_company_row, div.rs_ct_row{
+        width: 49%;
+    }
+}
+@media (min-width: 768px){
+    #content {
+        width: 750px;
+    }
+}
+@media (min-width: 992px){    
+    #content {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px){
+    #content {
+        width: 1170px;
+    }
+}
+
+
+
+
