@@ -50,3 +50,58 @@ if (function_exists("vc_set_shortcodes_templates_dir")) {
 
 /* load template functions */
 require_once( get_template_directory() . '/inc/template.functions.php' );
+
+// register shortcode
+// function rcn_shortcode($atts = [], $content = null)
+// {
+//     // do something to $content
+//     $content = '<h1>' . $content . '</h1>';
+//     // always return
+//     return $content;
+// }
+// add_shortcode('rcn', 'rcn_shortcode');
+
+function rcn_shortcode($atts = [], $content = null, $tag = '')
+{
+    $formHTML = file_get_contents(get_stylesheet_directory() . "/inc/inc-test.php");
+    // normalize attribute keys, lowercase
+    $atts = array_change_key_case((array)$atts, CASE_LOWER);
+ 
+    // override default attributes with user attributes
+    $rcn_atts = shortcode_atts([
+                                     'location' => 'Pick-Up Location',
+                                 ], $atts, $tag);
+ 
+    // start output
+    $o = '';
+ 
+    // start box
+    $o .= '<div class="rcn-box">';
+ 
+    // title
+    $o .=  str_replace("Pick-Up Location", esc_html__($rcn_atts['location'], 'rcn'), $formHTML) ;
+
+    // $o .= $formHTML;
+ 
+    // enclosing tags
+    if (!is_null($content)) {
+        // secure output by executing the_content filter hook on $content
+        $o .= apply_filters('the_content', $content);
+ 
+        // run shortcode parser recursively
+        $o .= do_shortcode($content);
+    }
+ 
+    // end box
+    $o .= '</div>';
+ 
+    // return output
+    return $o;
+}
+ 
+function rcn_shortcodes_init()
+{
+    add_shortcode('rcn', 'rcn_shortcode');
+}
+ 
+add_action('init', 'rcn_shortcodes_init');

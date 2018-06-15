@@ -19,7 +19,7 @@
 					name="query"
 					class="autosuggest rs_autosuggest"
 					type="text"
-					title="Pick-Up Location"
+					title="Pick-Up City"
 					autocomplete="off"
 					value="Enter a City or Airport"
 					onclick='this.value="";'
