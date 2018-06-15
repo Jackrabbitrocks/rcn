@@ -62,6 +62,12 @@ div.page-space-content{
     margin-right: auto;
     margin-left: auto;
 }
+
+/* remove breadcrumbs */
+div#breadcrumb-text {
+    display: none;
+}
+
 @media (max-width: 470px){
     .rs_searchWrapper .rs_searchbox .rs_mobi_date_container{
         text-align: center;
