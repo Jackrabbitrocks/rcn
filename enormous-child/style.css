@@ -20,14 +20,14 @@
 }
 
 body .site #page-title.page-title{
-    padding-top:40px;    
+    padding:40px 0; 
 }
 
 .rs_searchWrapper div.rs_searchbox {
     background-color: rgba(76, 146, 206, .7);
 }
 
-.rs_searchWrapper .rs_searchbox .rs_date div, .rs_searchWrapper .rs_searchbox .rs_rooms_row, .js-advanced-car-toggle.rs_multisearch__filter_toggle.rs_advanced_search_div.sb_label, .rs_searchWrapper .rs_searchbox .rs_car_form .rs_car_options .rs_car_option, .rs_searchWrapper .rs_searchbox .rs_form_row, .rs_searchWrapper .rs_products {
+.rs_searchWrapper .rs_searchbox .rs_date div, .rs_searchWrapper .rs_searchbox .rs_rooms_row, .js-advanced-car-toggle.rs_multisearch__filter_toggle.rs_advanced_search_div.sb_label, .rs_searchWrapper .rs_searchbox .rs_car_form .rs_car_options .rs_car_option, .rs_searchWrapper .rs_searchbox .rs_form_row, .rs_searchWrapper .rs_products, .rs_air_options .rs_air_option {
     line-height:1;
 }
 
@@ -67,6 +67,17 @@ div.page-space-content{
 div#breadcrumb-text {
     display: none;
 }
+
+/* stupid tweaking of the stupid form for the stupid views */
+.rs_hotel_form .rs_form_row.rs_autosuggest_row.rs_pickup {
+    padding-top: 2px;
+}
+
+div.rs_cabin_box{
+    margin-top: 21px;
+}
+
+/* MEDIA QUERIES QQQ */
 
 @media (max-width: 470px){
     .rs_searchWrapper .rs_searchbox .rs_mobi_date_container{
