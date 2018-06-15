@@ -21,7 +21,7 @@
 					type="text"
 					title="Pick-Up Location"
 					autocomplete="off"
-					value="Pick-Up Location"
+					value="Enter a City or Airport"
 					onclick='this.value="";'
 				>
 				</div>
@@ -74,10 +74,10 @@
 		</div>
 		<div name="vp" class="vp rs_search_form rs_vp_form rs_searchbox_hide">
 			<div class="rs_form_row rs_origin_row">
-				<input name="rs_o_city" class="from rs_autosuggest rs_from" value='Pick-Up Location' onclick='$(this).val("");' autocomplete="off">
+				<input name="rs_o_city" class="from rs_autosuggest rs_from" value='Enter a City or Airport' onclick='$(this).val("");' autocomplete="off">
 			</div>
 			<div class="rs_form_row rs_destination_row rs_no_margin">
-				<input name="rs_d_city" class="to rs_autosuggest rs_to" value='Drop-Off Location' onclick='$(this).val("");' autocomplete="off">
+				<input name="rs_d_city" class="to rs_autosuggest rs_to" value='Enter a City or Airport' onclick='$(this).val("");' autocomplete="off">
 			</div>
 			<div class='rs_mobi'>
 				<div class='rs_mobi_date_container rs_mobi_in'>
@@ -258,10 +258,10 @@
 			<div class="clear"></div>
 			<div id="air_round_trip">
 				<div class="rs_form_row rs_origin_row">
-					<input name="rs_o_city" class="from autosuggest rs_from" value='Pick-Up Location' onclick='$(this).val("");' autocomplete="off">
+					<input name="rs_o_city" class="from autosuggest rs_from" value='Enter a City or Airport' onclick='$(this).val("");' autocomplete="off">
 				</div>
 				<div class="rs_form_row rs_destination_row rs_no_margin">
-					<input name="rs_d_city" class="to autosuggest rs_to" value='Drop-Off Location' onclick='$(this).val("");' autocomplete="off">
+					<input name="rs_d_city" class="to autosuggest rs_to" value='Enter a City or Airport' onclick='$(this).val("");' autocomplete="off">
 				</div>
 				<div class='rs_mobi'>
 					<div class='rs_mobi_date_container rs_mobi_in'>
@@ -326,10 +326,10 @@
 			</div>
 			<div id="air_one_way">
 				<div class="rs_form_row rs_origin_row">				
-					<input name="rs_o_city1" class="from autosuggest rs_from" value='Pick-Up Location' onclick='$(this).val("");' autocomplete="off">
+					<input name="rs_o_city1" class="from autosuggest rs_from" value='Enter a City or Airport' onclick='$(this).val("");' autocomplete="off">
 				</div>
 				<div class="rs_form_row rs_destination_row rs_no_margin">
-					<input name="rs_d_city1" class="to autosuggest rs_to" value='Drop-Off Location' onclick='$(this).val("");' autocomplete="off">
+					<input name="rs_d_city1" class="to autosuggest rs_to" value='Enter a City or Airport' onclick='$(this).val("");' autocomplete="off">
 				</div>	
 				<div class='rs_mobi'>
 					<div class='rs_mobi_date_container rs_mobi_in'>
@@ -383,10 +383,10 @@
 				<div class="air_multi_seperator">
 					<h3>Flight 1</h3>
 					<div class="rs_form_row rs_origin_row">
-						<input name="rs_o_city1" class="from autosuggest rs_from" value='Pick-Up Location' onclick='$(this).val("");' autocomplete="off">
+						<input name="rs_o_city1" class="from autosuggest rs_from" value='Enter a City or Airport' onclick='$(this).val("");' autocomplete="off">
 					</div>
 					<div class="rs_form_row rs_destination_row rs_no_margin">
-						<input name="rs_d_city1" class="to autosuggest rs_to" value='Drop-Off Location' onclick='$(this).val("");' autocomplete="off">
+						<input name="rs_d_city1" class="to autosuggest rs_to" value='Enter a City or Airport' onclick='$(this).val("");' autocomplete="off">
 					</div>
 					<div class='rs_mobi'>
 						<div class='rs_mobi_date_container rs_mobi_in'>
@@ -410,10 +410,10 @@
 				<div class="air_multi_seperator">
 					<h3>Flight 2</h3>
 					<div class="rs_form_row rs_origin_row">
-						<input name="rs_o_city2" class="from autosuggest rs_from" value='Pick-Up Location' onclick='$(this).val("");' autocomplete="off">
+						<input name="rs_o_city2" class="from autosuggest rs_from" value='Enter a City or Airport' onclick='$(this).val("");' autocomplete="off">
 					</div>
 					<div class="rs_form_row rs_destination_row rs_no_margin">
-						<input name="rs_d_city2" class="to autosuggest rs_to" value='Drop-Off Location' onclick='$(this).val("");' autocomplete="off">
+						<input name="rs_d_city2" class="to autosuggest rs_to" value='Enter a City or Airport' onclick='$(this).val("");' autocomplete="off">
 					</div>
 						
 					<div class='rs_mobi'>
@@ -442,10 +442,10 @@
 				<div class="air_multi_seperator air_flight_3">
 					<h3>Flight 3</h3>
 					<div class="rs_form_row rs_origin_row">
-						<input name="rs_o_city3" class="from autosuggest rs_from" value='Pick-Up Location' onclick='$(this).val("");' autocomplete="off">
+						<input name="rs_o_city3" class="from autosuggest rs_from" value='Enter a City or Airport' onclick='$(this).val("");' autocomplete="off">
 					</div>					
 					<div class="rs_form_row rs_destination_row rs_no_margin">
-						<input name="rs_d_city3" class="to autosuggest rs_to" value='Drop-Off Location' onclick='$(this).val("");' autocomplete="off">
+						<input name="rs_d_city3" class="to autosuggest rs_to" value='Enter a City or Airport' onclick='$(this).val("");' autocomplete="off">
 					</div>
 						
 					
@@ -477,12 +477,12 @@
 				<div class="air_multi_seperator air_flight_4">
 					<h3>Flight 4</h3>
 					<div class="rs_form_row rs_origin_row">
-						<input name="rs_o_city4" class="from autosuggest rs_from" value='Pick-Up Location' onclick='$(this).val("");' autocomplete="off">
+						<input name="rs_o_city4" class="from autosuggest rs_from" value='Enter a City or Airport' onclick='$(this).val("");' autocomplete="off">
 					</div>
 						
 					
 					<div class="rs_form_row rs_destination_row">
-						<input name="rs_d_city4" class="to autosuggest rs_to" value='Drop-Off Location' onclick='$(this).val("");' autocomplete="off">
+						<input name="rs_d_city4" class="to autosuggest rs_to" value='Enter a City or Airport' onclick='$(this).val("");' autocomplete="off">
 					</div>
 						
 					
@@ -514,12 +514,12 @@
 				<div class="air_multi_seperator air_flight_5">
 					<h3>Flight 5</h3>
 					<div class="rs_form_row rs_origin_row">
-						<input name="rs_o_city5" class="from autosuggest rs_from" value='Pick-Up Location' onclick='$(this).val("");' autocomplete="off">
+						<input name="rs_o_city5" class="from autosuggest rs_from" value='Enter a City or Airport' onclick='$(this).val("");' autocomplete="off">
 					</div>
 						
 					
 					<div class="rs_form_row rs_destination_row">
-						<input name="rs_d_city5" class="to autosuggest rs_to" value='Drop-Off Location' onclick='$(this).val("");' autocomplete="off">
+						<input name="rs_d_city5" class="to autosuggest rs_to" value='Enter a City or Airport' onclick='$(this).val("");' autocomplete="off">
 					</div>
 						
 					
@@ -575,4 +575,6 @@
 			</div>
 		</div>
 	</div>
+</div>
+</div>
 </div>

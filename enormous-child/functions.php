@@ -20,9 +20,6 @@ function theme_enqueue_styles()
     wp_enqueue_style('rs_searchbox', get_stylesheet_directory_uri() . '/assets/css/rs_searchbox.css', array(
         $parent_style
     ));
-    // wp_enqueue_style('mobile_search', get_stylesheet_directory_uri() . '/assets/css/mobile_search.css', array(
-    //     $parent_style
-    // ));
     wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.0.13/css/all.css', array(
         $parent_style
     ));
