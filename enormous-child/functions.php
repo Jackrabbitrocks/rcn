@@ -109,7 +109,7 @@ add_action('init', 'rcn_shortcodes_init');
 
 // THIS REPLACES THE enormous_page_title function in header.php since it isn't modular
 function rot8tor_page_title(){
-    global $opt_theme_options, $opt_meta_options;
+    global $opt_theme_options, $opt_meta_options;    
 
     /* default. */
     $layout = '1';
@@ -330,7 +330,7 @@ function rot8tor_page_title(){
                     <div class="row">
                         <div id="breadcrumb-text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><?php enormous_get_bread_crumb(); ?></div>
                         <div id="page-title-text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <h1 class="reset-fontsize-xs"><?php enormous_get_page_title(); ?></h1>
+                            <h1 class="reset-fontsize-xs"><?php include get_stylesheet_directory_uri() . '/inc/inc-test.php'; ?></h1>
                             <?php if(!empty($opt_meta_options['page_title_subtext'])){?>
                                 <div class="page-title-subtitle">
                                     <?php echo wp_kses_post($opt_meta_options['page_title_subtext']); ?>  
