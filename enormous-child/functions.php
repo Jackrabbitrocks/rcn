@@ -105,3 +105,245 @@ function rcn_shortcodes_init()
 }
  
 add_action('init', 'rcn_shortcodes_init');
+
+
+// THIS REPLACES THE enormous_page_title function in header.php since it isn't modular
+function rot8tor_page_title(){
+    global $opt_theme_options, $opt_meta_options;
+
+    /* default. */
+    $layout = '1';
+
+    if (function_exists('is_woocommerce')){
+        if (!empty($opt_theme_options['background_shop_title']['url'])) {
+            $opt_theme_options['page_title_background']['url'] = $opt_theme_options['background_shop_title']['url'];
+        }    
+        if (!empty($opt_theme_options['background_overlay_shop'])) {
+            $opt_theme_options['background_overlay'] = $opt_theme_options['background_overlay_shop'];     
+        }         
+    }
+    if(is_page() && !empty($opt_meta_options['custom_page_title'])) {
+        $opt_theme_options['page_title_layout'] = $opt_meta_options['page_title_layout'];
+    }
+
+    /* get theme options */
+    if(isset($opt_theme_options['page_title_layout']))
+        $layout = $opt_theme_options['page_title_layout'];
+
+    /* custom layout from page. */
+    if(is_page() && !empty($opt_meta_options['page_title_bg_gradient_style'])) {
+        $opt_theme_options['page_title_bg_gradient_style'] = $opt_meta_options['page_title_bg_gradient_style'];
+    }
+    if(is_404()) {
+        return;
+    }
+    if (is_singular('portfolio')){
+        $layout= $opt_theme_options['portfolio_layout_pagetitle'];
+    }    
+
+    if( class_exists('Woocommerce') && is_shop() || class_exists('Woocommerce') && is_cart() || class_exists('Woocommerce') && is_checkout() || class_exists('Woocommerce') && is_singular('product')) { ?>
+        <div id="page-title" class="page-title" style="background-image: url(<?php echo esc_url($opt_theme_options['page_title_background']['url']); ?>);">
+            <div class="background-overlay" style="background-color: <?php echo esc_attr($opt_theme_options['background_overlay']['rgba'])?> "></div>     
+            <div class="container">
+                <div class="row">
+                    <div id="page-title-text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h1><?php enormous_get_page_title(); ?></h1></div>
+                    <div id="breadcrumb-text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><?php enormous_get_bread_crumb(); ?></div>
+                </div>
+            </div>
+        </div>
+    <?php } else { ?> 
+
+       
+    <?php switch ($layout){
+            case '1':         
+            ?>
+            <div id="page-title" class="page-title layout-<?php echo esc_attr($layout); ?>">
+                <div class="background-overlay <?php if($opt_meta_options['page_title_bg_overlay_primary'] == 'yes') {echo ' bg-overlay-primary';} ?>"></div>  
+                <div class="container">
+                    <div class="row">
+                        <div id="page-title-text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <h1 class="reset-fontsize-xs"><?php include get_stylesheet_directory_uri() . '/inc/inc-test.php'; ?></h1>
+                            <?php if(!empty($opt_meta_options['page_title_subtext'])){?>
+                                <div class="page-title-subtitle">
+                                    <?php echo wp_kses_post($opt_meta_options['page_title_subtext']); ?>  
+                                </div> 
+                            <?php }?>
+                        </div>
+                        <div id="breadcrumb-text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><?php enormous_get_bread_crumb(); ?></div>
+                    </div>
+                </div>
+            </div>
+           <!-- #page-title -->
+            <?php
+            break;
+            case '2':      
+            ?>
+            <div id="page-title" class="page-title layout-<?php echo esc_attr($layout); ?>">
+                <div class="background-overlay"></div>  
+                <div class="container">
+                    <div class="row">
+                        <div id="page-title-text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <h1 class="reset-fontsize-xs"><?php enormous_get_page_title(); ?></h1>
+                            <?php if(!empty($opt_meta_options['page_title_subtext'])){?>
+                                <div class="page-title-subtitle">
+                                    <?php echo wp_kses_post($opt_meta_options['page_title_subtext']); ?>  
+                                </div> 
+                            <?php }?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <!-- #page-title -->
+            <?php
+            break;
+            case '3':      
+            ?>
+            <div id="page-title" class="page-title layout-<?php echo esc_attr($layout); ?>">
+                <div class="background-overlay"></div>  
+                <div class="container">
+                    <div class="row">
+                        <div id="page-title-text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-left">
+                            <h1 class="reset-fontsize-xs"><?php enormous_get_page_title(); ?></h1>
+                            <?php if(!empty($opt_meta_options['page_title_subtext'])){?>
+                                <div class="page-title-subtitle">
+                                    <?php echo wp_kses_post($opt_meta_options['page_title_subtext']); ?>  
+                                </div> 
+                            <?php }?>
+                        </div>
+                        <div id="breadcrumb-text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-left"><?php enormous_get_bread_crumb(); ?></div>
+                    </div>
+                </div>
+            </div>
+           <!-- #page-title --> 
+            <?php
+            break;
+            case '4':      
+            ?>
+            <div id="page-title" class="page-title layout-<?php echo esc_attr($layout); ?>">
+                <div class="background-overlay bg-gradient <?php echo esc_attr($opt_theme_options['page_title_bg_gradient_style']);?>"></div>   
+                <div class="container">
+                    <div class="row">
+                        <div id="breadcrumb-text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><?php enormous_get_bread_crumb(); ?></div>
+                        <div id="page-title-text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <h1 class="reset-fontsize-xs"><?php enormous_get_page_title(); ?></h1>
+                            <?php if(!empty($opt_meta_options['page_title_subtext'])){?>
+                                <div class="page-title-subtitle">
+                                    <?php echo wp_kses_post($opt_meta_options['page_title_subtext']); ?>  
+                                </div> 
+                            <?php }?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <!-- #page-title -->
+            <?php
+            break;
+            case '5':      
+            ?>
+            <div id="page-title" class="page-title layout-<?php echo esc_attr($layout); ?>">
+                <div class="background-overlay"></div>  
+                <div class="container">
+                    <div class="row">
+                        <div id="page-title-text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <h1 class="reset-fontsize-xs"><?php enormous_get_page_title(); ?></h1>
+                            <?php if(!empty($opt_meta_options['page_title_subtext'])){?>
+                                <div class="page-title-subtitle">
+                                    <?php echo wp_kses_post($opt_meta_options['page_title_subtext']); ?>  
+                                </div> 
+                            <?php }?>
+                        </div>
+                        <div id="breadcrumb-text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><?php enormous_get_bread_crumb(); ?></div>
+                    </div>
+                </div>
+            </div>
+           <!-- #page-title -->
+            <?php
+            break;
+            case '6':      
+            ?>
+            <div id="page-title" class="page-title layout-<?php echo esc_attr($layout); ?>">
+                <div class="background-overlay"></div>  
+                <div class="container">
+                    <div class="row">
+                        <div id="page-title-text" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-left-md">
+                            <h1 class="reset-fontsize-xs"><?php enormous_get_page_title(); ?></h1>
+                            <?php if(!empty($opt_meta_options['page_title_subtext'])){?>
+                                <div class="page-title-subtitle">
+                                    <?php echo wp_kses_post($opt_meta_options['page_title_subtext']); ?>  
+                                </div> 
+                            <?php }?>
+                        </div>
+                        <div id="breadcrumb-text" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-right-md"><?php enormous_get_bread_crumb(); ?></div>
+                    </div>
+                </div>
+            </div>
+           <!-- #page-title -->
+            <?php
+            break;
+            case '7':      
+            ?>
+            <div id="page-title" class="page-title layout-<?php echo esc_attr($layout); ?>">
+                <div class="background-overlay bg-gradient <?php echo esc_attr($opt_theme_options['page_title_bg_gradient_style']);?>"></div>  
+                <div class="container">
+                    <div class="row">
+                        <div id="page-title-text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <h1 class="reset-fontsize-xs"><?php enormous_get_page_title(); ?></h1>
+                            <?php if(!empty($opt_meta_options['page_title_subtext'])){?>
+                                <div class="page-title-subtitle">
+                                    <?php echo wp_kses_post($opt_meta_options['page_title_subtext']); ?>  
+                                </div> 
+                            <?php }?>
+                        </div>
+                        <div id="breadcrumb-text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><?php enormous_get_bread_crumb(); ?></div>
+                    </div>
+                </div>
+            </div>
+           <!-- #page-title -->
+            <?php
+            break;
+            case '8':      
+            ?>
+            <div id="page-title" class="page-title layout-<?php echo esc_attr($layout); ?>">
+                <div class="background-overlay"></div>  
+                <div class="container">
+                    <div class="row">
+                        <div id="page-title-text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <h1 class="reset-fontsize-xs"><?php enormous_get_page_title(); ?></h1>
+                            <?php if(!empty($opt_meta_options['page_title_subtext'])){?>
+                                <div class="page-title-subtitle">
+                                    <?php echo wp_kses_post($opt_meta_options['page_title_subtext']); ?>  
+                                </div> 
+                            <?php }?>
+                        </div>
+                        <div id="breadcrumb-text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><?php enormous_get_bread_crumb(); ?></div>
+                    </div>
+                </div>
+            </div>
+           <!-- #page-title -->
+            <?php
+            break;
+            case '9':      
+            ?>
+            <div id="page-title" class="page-title layout-<?php echo esc_attr($layout); ?>">
+                <div class="background-overlay"></div>  
+                <div class="container">
+                    <div class="row">
+                        <div id="breadcrumb-text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><?php enormous_get_bread_crumb(); ?></div>
+                        <div id="page-title-text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <h1 class="reset-fontsize-xs"><?php enormous_get_page_title(); ?></h1>
+                            <?php if(!empty($opt_meta_options['page_title_subtext'])){?>
+                                <div class="page-title-subtitle">
+                                    <?php echo wp_kses_post($opt_meta_options['page_title_subtext']); ?>  
+                                </div> 
+                            <?php }?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <!-- #page-title -->
+            <?php
+            break;
+
+    } ?>
+    <?php }
+}
