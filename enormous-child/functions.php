@@ -102,9 +102,8 @@ function rcn_shortcode($atts = [], $content = null, $tag = '')
 function rcn_location_hint()
 {
     $formHTML = file_get_contents(get_stylesheet_directory() . "/inc/inc-test.php");
-    $theTitle = get_the_title();
 
-    //     $theLocation = get_field('location') ?? "Pick Up Location"; 
+    $theLocation = get_field('location') ?? "Pick Up Location"; 
  
     // start output
     $o = '';
@@ -113,14 +112,12 @@ function rcn_location_hint()
     $o .= '<div class="rcn-box">';
  
     // title
-    $o .=  str_replace("Pick-Up Location", $theTitle, $formHTML) ;
-    // $o .=  str_replace("Pick-Up Location", $theLocation, $formHTML) ;
+    $o .=  str_replace("Pick-Up Location", $theLocation, $formHTML) ;
  
     // end box
     $o .= '</div>';
     echo $o;
-    // return output
-    // return $o;
+
 }
  
 function rcn_shortcodes_init()
