@@ -28,6 +28,6 @@
 	<header id="masthead" class="site-header">
 		<?php enormous_header(); ?>
 	</header><!-- #masthead -->
-    <?php enormous_page_title(); ?><!-- #page-title -->
+    <?php rot8tor_page_title(); ?><!-- #page-title -->
     
 	<div id="content" class="site-content <?php echo esc_attr($page_class_space); ?>">
