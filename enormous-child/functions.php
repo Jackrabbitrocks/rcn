@@ -98,6 +98,30 @@ function rcn_shortcode($atts = [], $content = null, $tag = '')
     // return output
     return $o;
 }
+
+function rcn_location_hint()
+{
+    $formHTML = file_get_contents(get_stylesheet_directory() . "/inc/inc-test.php");
+    $theTitle = get_the_title();
+
+    //     $theLocation = get_field('location') ?? "Pick Up Location"; 
+ 
+    // start output
+    $o = '';
+ 
+    // start box
+    $o .= '<div class="rcn-box">';
+ 
+    // title
+    $o .=  str_replace("Pick-Up Location", $theTitle, $formHTML) ;
+    // $o .=  str_replace("Pick-Up Location", $theLocation, $formHTML) ;
+ 
+    // end box
+    $o .= '</div>';
+    echo $o;
+    // return output
+    // return $o;
+}
  
 function rcn_shortcodes_init()
 {
@@ -330,7 +354,7 @@ function rot8tor_page_title(){
                     <div class="row">
                         <div id="breadcrumb-text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><?php enormous_get_bread_crumb(); ?></div>
                         <div id="page-title-text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <h1 class="reset-fontsize-xs"><?php include get_stylesheet_directory_uri() . '/inc/inc-test.php'; ?></h1>
+                            <h1 class="reset-fontsize-xs"><?php rcn_location_hint(); ?></h1>
                             <?php if(!empty($opt_meta_options['page_title_subtext'])){?>
                                 <div class="page-title-subtitle">
                                     <?php echo wp_kses_post($opt_meta_options['page_title_subtext']); ?>  
