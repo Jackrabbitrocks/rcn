@@ -102,9 +102,8 @@ function rcn_shortcode($atts = [], $content = null, $tag = '')
 function rcn_location_hint()
 {
     $formHTML = file_get_contents(get_stylesheet_directory() . "/inc/inc-test.php");
-    $theTitle = get_the_title();
 
-    //     $theLocation = get_field('location') ?? "Pick Up Location"; 
+    $theLocation = get_field('location') ?: "Pick Up Location"; 
  
     // start output
     $o = '';
@@ -113,14 +112,12 @@ function rcn_location_hint()
     $o .= '<div class="rcn-box">';
  
     // title
-    $o .=  str_replace("Pick-Up Location", $theTitle, $formHTML) ;
-    // $o .=  str_replace("Pick-Up Location", $theLocation, $formHTML) ;
+    $o .=  str_replace("Pick-Up Location", $theLocation, $formHTML) ;
  
     // end box
     $o .= '</div>';
     echo $o;
-    // return output
-    // return $o;
+
 }
  
 function rcn_shortcodes_init()
@@ -348,12 +345,21 @@ function rot8tor_page_title(){
             break;
             case '9':      
             ?>
-            <div id="page-title" class="page-title layout-<?php echo esc_attr($layout); ?>">
+            <div id="page-title" class="page-title layout-<?php echo esc_attr($layout); ?>" style="background-image: url('<?php
+                if( get_field('form_image') ):
+                    the_field('form_image');
+                else:
+                    // sets the default image if no images are set
+                    $uploads = wp_upload_dir(); 
+                    echo esc_url( $uploads['baseurl'] . '/2018/06/background1.jpg');
+                endif;
+             ?>'); background-size: cover;">
                 <div class="background-overlay"></div>  
                 <div class="container">
                     <div class="row">
                         <div id="breadcrumb-text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><?php enormous_get_bread_crumb(); ?></div>
                         <div id="page-title-text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <!-- ADD THE SEARCH FORM TO THE PAGE/POST HEADER -->
                             <h1 class="reset-fontsize-xs"><?php rcn_location_hint(); ?></h1>
                             <?php if(!empty($opt_meta_options['page_title_subtext'])){?>
                                 <div class="page-title-subtitle">

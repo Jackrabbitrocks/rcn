@@ -102,6 +102,12 @@ div.rs_cabin_box{
     position: relative;
 }
 
+.entry-feature-image{
+    display: none;
+}
+
+/* MEDIA QUERIES */
+
 @media (max-width: 598px){
     div.rs_company_row, div.rs_ct_row{
         width: 49%;
