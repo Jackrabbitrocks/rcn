@@ -103,7 +103,7 @@ function rcn_location_hint()
 {
     $formHTML = file_get_contents(get_stylesheet_directory() . "/inc/inc-test.php");
 
-    $theLocation = get_field('location') ?? "Pick Up Location"; 
+    $theLocation = get_field('location') ?: "Pick Up Location"; 
  
     // start output
     $o = '';
@@ -345,7 +345,7 @@ function rot8tor_page_title(){
             break;
             case '9':      
             ?>
-            <div id="page-title" class="page-title layout-<?php echo esc_attr($layout); ?>">
+            <div id="page-title" class="page-title layout-<?php echo esc_attr($layout); ?>" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>'); background-size: cover;">
                 <div class="background-overlay"></div>  
                 <div class="container">
                     <div class="row">
