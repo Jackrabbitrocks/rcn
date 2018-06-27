@@ -358,14 +358,9 @@ function rot8tor_page_title(){
                 <div class="container">
                     <div class="row">
                         <div id="breadcrumb-text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><?php enormous_get_bread_crumb(); ?></div>
-                        <div id="page-title-text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div id="header-form" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <!-- ADD THE SEARCH FORM TO THE PAGE/POST HEADER -->
                             <h1 class="reset-fontsize-xs"><?php rcn_location_hint(); ?></h1>
-                            <?php if(!empty($opt_meta_options['page_title_subtext'])){?>
-                                <div class="page-title-subtitle">
-                                    <?php echo wp_kses_post($opt_meta_options['page_title_subtext']); ?>  
-                                </div> 
-                            <?php }?>
                         </div>
                     </div>
                 </div>

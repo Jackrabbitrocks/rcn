@@ -102,8 +102,21 @@ div.rs_cabin_box{
     position: relative;
 }
 
-.entry-feature-image{
-    display: none;
+.site-content #page-title-text h1{
+    font-size: 52px;
+    line-height: 46px;
+}
+
+div#content{
+    padding-top: 50px;
+}
+
+div.widget-area{
+    padding-top:0;
+}
+
+body.page-template-blog-classic-right-sidebar #content{
+    margin: 0 auto;
 }
 
 /* MEDIA QUERIES */

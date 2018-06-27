@@ -245,4 +245,7 @@ function showMulti(num){
    			$('.rs_tabs').removeClass('highlight_tab');
    			$('#rs_'+$option+'_tab').addClass('highlight_tab');
 		});
+		// purely because I hate the theme putting this obscure !important class in here so I'm brute forcing it away with jquery fuck you.
+		$('#content').removeClass("pt-0 pb-0");
+
 	});

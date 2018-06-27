@@ -31,3 +31,11 @@
     <?php rot8tor_page_title(); ?><!-- #page-title -->
     
 	<div id="content" class="site-content <?php echo esc_attr($page_class_space); ?>">
+		<div id="page-title-text">
+		    <h3 class="reset-fontsize-xs"><?php single_post_title(); ?></h3>
+		    <?php if(!empty($opt_meta_options['page_title_subtext'])){?>
+		        <div class="page-title-subtitle">
+		            <?php echo wp_kses_post($opt_meta_options['page_title_subtext']); ?>  
+		        </div> 
+		    <?php }?>
+		</div>
